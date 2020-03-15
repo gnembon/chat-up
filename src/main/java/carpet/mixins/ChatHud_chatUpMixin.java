@@ -13,7 +13,7 @@ public class ChatHud_chatUpMixin
 {
     public final int OFFSET = 10;
 
-    @Redirect(method = "render", remap = false, at = @At(
+    @Redirect(method = "render", at = @At(
             value = "INVOKE",
             target = "Lcom/mojang/blaze3d/systems/RenderSystem;translatef(FFF)V",
             ordinal = 0
