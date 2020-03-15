@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "chat-up",
+  "version": "1.0",
+
+  "name": "Chat Up!",
+  "description": "Moves chat history 10 px up to not collide with armour hunches",
+  "authors": [
+    "Gnembon"
+  ],
+  "contact": {
+    "homepage": "https://github.com/gnembon/chat-up",
+    "sources": "https://github.com/gnembon/chat-up"
+  },
+
+  "license": "LGPL-3.0",
+  "icon": "assets/chatup/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+    ]
+  },
+  "mixins": [
+    "chatup.mixins.json"
+  ],
+  "depends": {
+    "minecraft": "*"
+  }
+}
