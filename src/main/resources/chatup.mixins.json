@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "carpet.mixins",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+  ],
+  "client": [
+    "ChatHud_chatUpMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
