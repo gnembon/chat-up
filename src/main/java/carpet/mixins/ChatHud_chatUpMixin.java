@@ -14,7 +14,7 @@ public class ChatHud_chatUpMixin
 
     @ModifyArg(method = "render", index = 1, at = @At(
             value = "INVOKE",
-            target = "Lcom/mojang/blaze3d/systems/RenderSystem;translatef(FFF)V",
+            target = "Lcom/mojang/blaze3d/platform/GlStateManager;translatef(FFF)V",
             ordinal = 0
     ))
     private float offsetY(float y)
