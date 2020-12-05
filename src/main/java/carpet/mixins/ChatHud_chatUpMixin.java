@@ -22,7 +22,7 @@ public class ChatHud_chatUpMixin
         return y- CHAT_UP_OFFSET;
     }
 
-    @ModifyConstant(method = "getText", constant = @Constant(doubleValue = 40.0), expect = 1)
+    @ModifyConstant(method = "getText", constant = @Constant(doubleValue = 60.0), expect = 1)
     private double textBottomOffset(double original)
     {
         return original+ CHAT_UP_OFFSET;
