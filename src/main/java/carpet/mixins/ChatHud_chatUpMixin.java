@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 @Mixin(ChatHud.class)
 public class ChatHud_chatUpMixin
 {
-    private static final int CHAT_UP_OFFSET = 10;
+    private static final int CHAT_UP_OFFSET = 20;
 
     @ModifyArg(method = "render", index = 1, at = @At(
             value = "INVOKE",
@@ -22,7 +22,7 @@ public class ChatHud_chatUpMixin
         return y- CHAT_UP_OFFSET;
     }
 
-    @ModifyConstant(method = "getText", constant = @Constant(doubleValue = 60.0), expect = 1)
+    @ModifyConstant(method = "getText", constant = @Constant(doubleValue = 40.0), expect = 1)
     private double textBottomOffset(double original)
     {
         return original+ CHAT_UP_OFFSET;
