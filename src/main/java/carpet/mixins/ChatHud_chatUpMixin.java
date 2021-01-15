@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 @Mixin(ChatHud.class)
 public class ChatHud_chatUpMixin
 {
-    private static final int CHAT_UP_OFFSET = 10;
+    private static final int CHAT_UP_OFFSET = 20;
 
     @ModifyArg(method = "render", index = 1, at = @At(
             value = "INVOKE",
