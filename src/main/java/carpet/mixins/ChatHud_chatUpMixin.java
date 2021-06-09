@@ -14,15 +14,15 @@ public class ChatHud_chatUpMixin
 
     @ModifyArg(method = "render", index = 1, at = @At(
             value = "INVOKE",
-            target = "Lcom/mojang/blaze3d/systems/RenderSystem;translatef(FFF)V",
+            target = "Lnet/minecraft/client/util/math/MatrixStack;translate(DDD)V",
             ordinal = 0
     ))
-    private float offsetY(float y)
+    private double offsetY(double y)
     {
         return y- CHAT_UP_OFFSET;
     }
 
-    @ModifyConstant(method = "getText", constant = @Constant(doubleValue = 40.0), expect = 1)
+    @ModifyConstant(method = "getText", constant = @Constant(doubleValue = 40.0))
     private double textBottomOffset(double original)
     {
         return original+ CHAT_UP_OFFSET;
