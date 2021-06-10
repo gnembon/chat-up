@@ -1,14 +1,11 @@
 {
   "schemaVersion": 1,
   "id": "chat-up",
-  "version": "1.0",
+  "version": "2.0",
 
   "name": "Chat Up!",
   "description": "Moves chat history 10 px up to not collide with armour hunches",
-  "authors": [
-    "Gnembon",
-    "IAmThePerson"
-  ],
+  "authors": ["Gnembon", "IAmThePerson", "replaceitem"],
   "contact": {
     "homepage": "https://github.com/gnembon/chat-up",
     "sources": "https://github.com/gnembon/chat-up"
