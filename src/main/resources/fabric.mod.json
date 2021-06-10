@@ -19,7 +19,11 @@
 
   "environment": "*",
   "entrypoints": {
-    "main": [
+    "client": [
+      "carpet.ChatUp"
+    ],
+    "modmenu": [
+      "carpet.config.ModMenuEntryPoint"
     ]
   },
   "mixins": [
