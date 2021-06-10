@@ -25,22 +25,13 @@ public class ChatHud_chatUpMixin
         if(Config.disableMod == true) {
             return 0;
         } else {
-
             if(Config.dynamicOffset == true) {
-                if (player.getArmor() > 0) {
-                    return Config.extraOffset + 10;
-                } else {
-                    return Config.extraOffset;
-                }
+                int offset = player.getArmor()>0?10 + Config.extraOffset:0 + Config.extraOffset;
+                if(player.getAbsorptionAmount()>0) offset += 10;
+                return offset;
             } else if(Config.dynamicOffset == false) {
                 int offset = Config.extraOffset + 10;
                 return offset;
-
-            //TODO: Fix Absorbtion so it gets effected by ANY offset (not just extraOffset)
-//                if (player.getAbsorptionAmount()>0){
-//                    int offset =+ Config.extraOffset;
-//                    return offset;
-//                }
             }
         }
         return 0;
