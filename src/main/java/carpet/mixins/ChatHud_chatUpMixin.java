@@ -1,5 +1,6 @@
 package carpet.mixins;
 
+import carpet.config.Config;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.hud.ChatHud;
 import net.minecraft.client.network.ClientPlayerEntity;
@@ -20,9 +21,20 @@ public class ChatHud_chatUpMixin
     {
         ClientPlayerEntity player = this.client.player;
         if(player == null || player.isCreative() || player.isSpectator()) return 0;
-        int offset = player.getArmor()>0?10:0;
-        if(player.getAbsorptionAmount()>0) offset += 10;
-        return offset;
+
+        if(Config.disableMod == true) {
+            return 0;
+        } else {
+            if(Config.dynamicOffset == true) {
+                int offset = player.getArmor()>0?10 + Config.extraOffset:0 + Config.extraOffset;
+                if(player.getAbsorptionAmount()>0) offset += 10;
+                return offset;
+            } else if(Config.dynamicOffset == false) {
+                int offset = Config.extraOffset + 10;
+                return offset;
+            }
+        }
+        return 0;
     }
 
     @ModifyArg(method = "render", index = 1, at = @At(
