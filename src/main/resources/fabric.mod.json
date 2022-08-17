@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "chat-up",
-  "version": "2.0",
+  "version": "2.1",
 
   "name": "Chat Up!",
   "description": "Moves chat history 10 px up to not collide with armour hunches",
@@ -14,7 +14,7 @@
   "license": "LGPL-3.0",
   "icon": "assets/chatup/icon.png",
 
-  "environment": "*",
+  "environment": "client",
   "entrypoints": {
     "main": [
     ]

@@ -35,7 +35,7 @@ public class ChatHud_chatUpMixin
         return y - getOffset();
     }
 
-    @ModifyConstant(method = "getText", constant = @Constant(doubleValue = 40.0))
+    @ModifyConstant(method = "toChatLineY", constant = @Constant(doubleValue = 40.0))
     private double textBottomOffset(double original)
     {
         return original + getOffset();
