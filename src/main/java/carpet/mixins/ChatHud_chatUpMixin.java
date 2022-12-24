@@ -19,18 +19,18 @@ public class ChatHud_chatUpMixin
     private int getOffset()
     {
         ClientPlayerEntity player = this.client.player;
-        if(player == null || player.isCreative() || player.isSpectator()) return 0;
-        int offset = player.getArmor()>0?10:0;
-        if(player.getAbsorptionAmount()>0) offset += 10;
+        if (player == null || player.isCreative() || player.isSpectator()) return 0;
+        int offset = player.getArmor() > 0 ? 10 : 0;
+        if (player.getAbsorptionAmount() > 0) offset += 10;
         return offset;
     }
 
     @ModifyArg(method = "render", index = 1, at = @At(
             value = "INVOKE",
-            target = "Lnet/minecraft/client/util/math/MatrixStack;translate(DDD)V",
+            target = "Lnet/minecraft/client/util/math/MatrixStack;translate(FFF)V",
             ordinal = 0
     ))
-    private double offsetY(double y)
+    private float offsetY(float y)
     {
         return y - getOffset();
     }
