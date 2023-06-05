@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "chat-up",
-  "version": "2.1",
+  "version": "2.2",
 
   "name": "Chat Up!",
   "description": "Moves chat history 10 px up to not collide with armour hunches",
