@@ -21,6 +21,6 @@
     "chatup.mixins.json"
   ],
   "depends": {
-    "minecraft": "~1.20-rc1"
+    "minecraft": "~${mcversion}"
   }
 }
